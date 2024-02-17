@@ -1,0 +1,5 @@
+SetEnv DB_DSN "mysql:host=localhost;dbname=trailblazers;"
+SetEnv DB_USERNAME "root"
+SetEnv DB_PASSWORD "root"
+
+Options All -Indexes

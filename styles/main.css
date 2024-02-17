@@ -1,0 +1,52 @@
+/*Mauricio Rivera
+// IT 202 - 002
+// 2/17/2024
+// Phase 1
+// msr26@njit.edu
+ */
+
+:root {
+    --text: oklch(20.80% 0.037 99.39);
+    --text-white: oklch(0.994 0.03 106.933);
+    --background: oklch(98.61% 0.017 99.59);
+    --background-dark: oklch(0.415 0.019 111.106);
+    --primary: oklch(75.05% 0.085 103.62);
+    --primary-darken: oklch(70.05% 0.085 103.62);
+    --secondary: oklch(81.41% 0.045 103.05);
+    --secondary-dark: oklch(76.41% 0.045 103.05);
+    --accent: oklch(74.70% 0.069 116.39);
+    --accent-dark: oklch(74.70% 0.069 116.39);
+    --accent-light: oklch(0.928 0.043 108.639);
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    color: var(--text);
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a:hover, a:visited {
+    text-decoration: none;
+}
+
+button, input, textarea {
+    font-family: 'League Spartan', sans-serif;
+    background: none;
+    color: var(--text);
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}

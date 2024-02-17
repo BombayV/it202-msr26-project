@@ -1,0 +1,2 @@
+# show 404 page on /static folder
+ErrorDocument 404 404.html
