@@ -7,6 +7,12 @@
 </style>
 
 <?php
+/*Mauricio Rivera
+// IT 202 - 002
+// 2/21/2024
+// Phase 1
+// msr26@njit.edu
+ */
 $rawData = include_once $root.'db/getItems.php';
 $categories = $rawData['categories'];
 $items = $rawData['items'];
