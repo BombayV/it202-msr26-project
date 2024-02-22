@@ -12,7 +12,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 20rem;
+    min-height: 22rem;
     width: 100%;
     color: #fff;
     text-align: center;
@@ -119,7 +119,7 @@ main p {
 /* Media queries */
 @media not all and (max-width: 768px) {
     main {
-        min-height: 24rem;
+        min-height: 32rem;
     }
 
     main h1 {

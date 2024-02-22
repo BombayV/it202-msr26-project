@@ -15,8 +15,9 @@
     --secondary: oklch(81.41% 0.045 103.05);
     --secondary-dark: oklch(76.41% 0.045 103.05);
     --accent: oklch(74.70% 0.069 116.39);
-    --accent-dark: oklch(74.70% 0.069 116.39);
+    --accent-dark: oklch(71.70% 0.069 116.39);
     --accent-light: oklch(0.928 0.043 108.639);
+    --card: oklch(0.945 0.022 106.823);
 }
 
 body {
@@ -35,7 +36,7 @@ a:hover, a:visited {
     text-decoration: none;
 }
 
-button, input, textarea {
+button, input, textarea, select {
     font-family: 'League Spartan', sans-serif;
     background: none;
     color: var(--text);
