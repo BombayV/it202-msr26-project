@@ -10,6 +10,8 @@ main {
     min-height: 100vh;
     color: var(--text);
     padding: 6rem 2rem 4rem;
+    max-width: 80rem;
+    margin: 0 auto;
 }
 
 main>h1 {
@@ -22,7 +24,7 @@ main>h1 {
     padding: 0.8rem 1.2rem 0.8rem 0.8rem;
     font-size: 1.2rem;
     background: var(--card);
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.4rem;
     border-radius: 8px;
     text-transform: capitalize;
 }
