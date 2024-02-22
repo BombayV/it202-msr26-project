@@ -21,7 +21,6 @@ nav {
 }
 
 .nav__link {
-    color: var(--text-white);
     font-size: 1.2rem;
     border-bottom: 1px solid transparent;
     text-decoration: none;
@@ -37,7 +36,6 @@ nav {
     max-width: 5rem;
     max-height: 5rem;
     margin-left: 2rem;
-    filter: invert(1);
 }
 
 .cart-btn {

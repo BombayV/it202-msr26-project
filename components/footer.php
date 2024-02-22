@@ -18,7 +18,7 @@
 <footer>
   <div class="pages__cont">
     <div class="links__cont">
-      <p class="links__title">Pages</p>
+      <p class="links__title">Index</p>
       <?php foreach($firstRoutes as $name => $path): ?>
         <a class="footer__link" href="<?php echo $path; ?>">
           <?php echo $name; ?>

@@ -5,6 +5,7 @@
 // Phase 1
 // msr26@njit.edu
   $root = isset($root) ? $root : '.';
+  $blackLogo = isset($blackLogo) ? $blackLogo : false;
   $routes = array(
     "Shipping" => $root.'/shipping',
     "Shop" => $root.'/shop',
@@ -18,11 +19,15 @@
 
 <nav>
   <a href="../">
-    <img class="logo" src="<?php echo $root.'/static/images/black_empty.png'; ?>" alt="Trailblazers logo" />
+    <img
+        style="<?php echo !$blackLogo ? 'filter: invert(1);' : ''; ?>"
+        class="logo" src="<?php echo $root.'/static/images/black_empty.png'; ?>" alt="Trailblazers logo" />
   </a>
   <div class="nav__links">
     <?php foreach($routes as $name => $path): ?>
-      <a class="nav__link" href="<?php echo $path; ?>">
+      <a class="nav__link"
+         style="<?php echo !$blackLogo ? 'color: var(--text-white);' : 'color: var(--text);'; ?>"
+         href="<?php echo $path; ?>">
         <?php echo $name; ?>
       </a>
     <?php endforeach; ?>
