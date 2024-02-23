@@ -39,6 +39,20 @@ $mainContent = '
       <img src="./static/images/hiking_one.jpg" alt="Store" />
     </div>
   </div>
+    <div class="info">
+    <div class="info__text">
+      <h2>Where We Are</h2>
+      <p>
+        Located in the heart of the city, our store is easily accessible to everyone.
+        With a wide variety of gear, you can find everything you need for your next adventure. 
+        Go to 2700A Rte 22 E, Union, NJ 07083 and visit us today!
+        Discover the best gear for your outdoor adventures at the best prices.
+      </p>
+    </div>
+    <div class="info__image">
+      <img src="./static/images/hiking_two.jpg" alt="Store" />
+    </div>
+  </div>
 </div>
 ';
 $content = $mainContent;
