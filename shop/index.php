@@ -13,6 +13,7 @@
 // Phase 1
 // msr26@njit.edu
  */
+session_start();
 $rawData = include_once $root.'db/getItems.php';
 $categories = $rawData['categories'];
 $items = $rawData['items'];
@@ -65,7 +66,7 @@ for ($i = 0; $i < count($categories); $i++) {
 $mainContent = '
 <main>
   <h1>Trailshop</h1>
-   <select id="category-select">
+  <select id="category-select">
     <option value="0">All</option>
     '.$selectOptions.'
   </select>

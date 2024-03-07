@@ -1,0 +1,128 @@
+/*Mauricio Rivera
+// IT 202 - 002
+// 2/17/2024
+// Phase 1
+// msr26@njit.edu
+ */
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    min-height: 100vh;
+    color: var(--text);
+    background: var(--background);
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+main h1 {
+    margin-top: 6rem;
+    font-size: 2.4rem;
+    padding: 0 1.5rem;
+    font-weight: 600;
+}
+
+.modifier-cont {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 1.2rem;
+}
+
+form {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.form-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 0.2rem;
+}
+
+.form-group select {
+    font-family: 'League Spartan', sans-serif;
+    padding: 0.8rem 1.2rem 0.8rem 0.8rem;
+    font-size: 1rem;
+    background: var(--card);
+    border-radius: 0.4rem;
+    text-transform: capitalize;
+}
+
+.form-group select option {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.0rem;
+    text-transform: capitalize;
+}
+
+.form-group label {
+    margin-left: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.9rem 1.0rem;
+    border-radius: 0.4rem;
+    background: var(--card);
+    color: var(--text);
+    font-size: 1.0rem;
+    resize: none;
+}
+
+form button {
+    width: 100%;
+    padding: 0.8rem 1.0rem;
+    border-radius: 0.4rem;
+    background: var(--primary);
+    color: var(--text);
+    font-size: 1.0rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: var(--primary-darken);
+}
+
+.display-item-cont {
+    width: 90%;
+    margin: 1.8rem 2rem 0;
+}
+
+#resp-msg {
+    margin-top: 1.4rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.error-msg {
+    color: maroon;
+}
+
+.success-msg {
+    color: darkolivegreen;
+}
+
+@media not all and (max-width: 768px) {
+    .modifier-cont {
+        flex-direction: row;
+        width: 95%;
+        margin: 1.2rem 2rem 0;
+    }
+}

@@ -78,9 +78,15 @@ CREATE TABLE `users` (
     `email` VARCHAR(255) NOT NULL,
     `password` VARCHAR(255) NOT NULL,
     `username` VARCHAR(40) NOT NULL,
-    `address` VARCHAR(255) NOT NULL,
+    `address` VARCHAR(255) DEFAULT NULL,
+    `isAdmin` TINYINT(1) NOT NULL DEFAULT 0,
     PRIMARY KEY (`id`)
 );
+
+INSERT INTO `users`
+    (`email`, `password`, `username`, `address`, `isAdmin`)
+VALUES
+    ('dev@gmail.com', 'dev', 'dev', '1234 Main St', 1);
 
 CREATE TABLE `orders` (
     `id` INT NOT NULL AUTO_INCREMENT,

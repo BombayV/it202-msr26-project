@@ -16,7 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 1.2rem;
     margin-right: 2rem;
 }
 
@@ -32,10 +32,21 @@ header {
     border-bottom: 1px solid var(--text-white);
 }
 
+.nav__link.dark:hover {
+    border-bottom: 1px solid var(--text);
+}
+
 .logo {
     max-width: 5rem;
     max-height: 5rem;
     margin-left: 2rem;
+}
+
+.cart-cont {
+    display: flex;
+    column-gap: 0.4rem;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .cart-btn {

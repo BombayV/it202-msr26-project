@@ -1,0 +1,93 @@
+ /*Mauricio Rivera
+// IT 202 - 002
+// 2/21/2024
+// Phase 1
+// msr26@njit.edu
+ */
+
+main {
+    background: var(--background);
+    min-height: calc(100vh - 6rem);
+    color: var(--text);
+    padding: 6rem 2rem 4rem;
+    max-width: 24rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-cont {
+    width: 100%;
+}
+
+.form-cont>h1 {
+    font-size: 2.0rem;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+}
+
+form {
+    margin-top: 1rem;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.2rem;
+}
+
+.form-group label {
+    margin-left: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.9rem 1.0rem;
+    border-radius: 0.4rem;
+    background: var(--card);
+    color: var(--text);
+    font-size: 1.0rem;
+}
+
+form button {
+    width: 100%;
+    padding: 0.8rem 1.0rem;
+    border-radius: 0.4rem;
+    background: var(--primary);
+    color: var(--text);
+    font-size: 1.0rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: var(--primary-darken);
+}
+
+.signup-link {
+    text-decoration: none;
+    color: var(--primary-darken);
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+/* Media queries */
+@media not all and (max-width: 768px) {
+
+}
+
+@media not all and (max-width: 1280px) {
+
+}

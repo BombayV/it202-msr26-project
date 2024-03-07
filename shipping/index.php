@@ -4,6 +4,7 @@
 // 2/17/2024
 // Phase 1
 // msr26@njit.edu
+session_start();
 $title = 'Shipping' ?>
 <?php $root = '../' ?>
 

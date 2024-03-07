@@ -10,6 +10,17 @@
     "Shipping" => $root.'/shipping',
     "Shop" => $root.'/shop',
   );
+
+  if (isset($_SESSION['is_admin'])) {
+    $routes['Create'] = $root.'/create';
+  }
+
+  if (!isset($_SESSION['email'])) {
+    $routes['Login'] = $root.'/auth/login';
+    $routes['Sign Up'] = $root.'/auth/signup';
+  } else {
+    $routes['Logout'] = $root.'/auth/logout';
+  }
 ?>
 
 
@@ -18,14 +29,14 @@
 </style>
 
 <header>
-  <a href="../">
+  <a href="<?php echo $root; ?>">
     <img
         style="<?php echo !$blackLogo ? 'filter: invert(1);' : ''; ?>"
         class="logo" src="<?php echo $root.'/static/images/black_empty.png'; ?>" alt="Trailblazers logo" />
   </a>
   <nav class="nav__links">
     <?php foreach($routes as $name => $path): ?>
-      <a class="nav__link"
+      <a class="nav__link <?php echo !$blackLogo ? '' : 'dark' ?>"
          style="<?php echo !$blackLogo ? 'color: var(--text-white);' : 'color: var(--text);'; ?>"
          href="<?php echo $path; ?>">
         <?php echo $name; ?>
