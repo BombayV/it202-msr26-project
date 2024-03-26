@@ -27,6 +27,7 @@ main>h1 {
     margin-bottom: 1.4rem;
     border-radius: 8px;
     text-transform: capitalize;
+    height: 2.8rem;
 }
 
 #category-select option {
@@ -117,6 +118,15 @@ main>h1 {
 .item-data button:hover {
     background: var(--accent-dark);
 }
+
+.item-data .item__delete {
+    background: maroon;
+    color: var(--text-white)
+}
+ .item-data .item__delete:hover {
+     background: #6a0000;
+     color: var(--text-white)
+ }
 
 /* Media queries */
 @media not all and (max-width: 768px) {

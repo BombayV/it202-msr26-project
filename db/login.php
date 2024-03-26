@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   $conn = $db['conn'];
   $email = $_POST['email'];
-  $emailQuery = 'SELECT password, username, isAdmin FROM users WHERE email = :email';
+  $emailQuery = 'SELECT password, firstname, lastname, isAdmin FROM users WHERE email = :email';
   $stmt = $conn->prepare($emailQuery);
   $stmt->bindParam(':email', $email);
   $stmt->execute();
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (password_verify($password, $result['password'])) {
       session_start();
       $_SESSION['email'] = $email;
-      $_SESSION['username'] = $result['username'];
+      $_SESSION['name'] = $result['firstname'] . ' ' . $result['lastname'];
       $_SESSION['is_admin'] = $result['isAdmin'];
       header('Location: ../');
       exit;

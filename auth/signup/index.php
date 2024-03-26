@@ -33,8 +33,12 @@ $mainContent = '
     <p>Sign up to get started and begin your journey</p>
     <form action="' . $loginPath . '" method="POST">
       <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" placeholder="Joe Doe" required>
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Joe" required>
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Doe" required>
       </div>
       <div class="form-group">
         <label for="email">Email</label>

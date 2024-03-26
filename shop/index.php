@@ -31,6 +31,16 @@ for ($i = 0; $i < count($items); $i++) {
       $'.$items[$i]['price'].'
     ';
 
+  $formPath = $root . 'db/deleteItem.php';
+  $buttonContent = isset($_SESSION['is_admin']) && $_SESSION['is_admin'] ? '
+    <form action="'.$formPath.'" class="delete-form" method="POST">
+      <button type="button" data-code="'.$items[$i]['code'].'" class="item__submit">Add to Cart</button>
+      <button type="submit" name="code" value="'.$items[$i]['code'].'" class="item__delete">Delete</button>
+    </form>
+  ' : '
+    <button data-code="'.$items[$i]['code'].'" class="item__submit">Add to Cart</button>
+  ';
+
   $shopContent .= '
   <div class="shop-item" data-category="'.$items[$i]['categoryId'].'">
     <img 
@@ -50,7 +60,7 @@ for ($i = 0; $i < count($items); $i++) {
         </div>
         <p class="item-data__description">'.$items[$i]['description'].'</p>
       </div>
-      <button data-category="'.$items[$i]['categoryId'].'" class="item__submit">Add to Cart</button>
+      '.$buttonContent.'
     </div>
   </div>
   ';
@@ -82,4 +92,4 @@ $content = $mainContent;
 require_once '../layouts/default.php';
 ?>
 
-<script src="./scripts/main.js"></script>
+<script src="<?php echo $root . '/shop/scripts/main.js'?>"></script>

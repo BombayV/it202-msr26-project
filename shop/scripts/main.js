@@ -32,7 +32,7 @@ const addShopItemListener = () => {
             e.preventDefault();
             // Add to local storage
             const target = e.target;
-            console.log(target.dataset.category);
+            console.log(target.dataset.code);
         })
     }
 }

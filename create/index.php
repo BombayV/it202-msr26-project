@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['is_admin'])) {
+if (!isset($_SESSION['is_admin']) || !$_SESSION['is_admin']) {
   header('Location: ../');
   exit;
 }
@@ -118,4 +118,4 @@ $content = $mainContent;
 require_once $root . './layouts/default.php'
 ?>
 
-<script type="application/javascript" src="./scripts/itemUpdater.js"></script>
+<script type="application/javascript" src="<?php echo $root . 'create/scripts/itemUpdater.js'?>"></script>

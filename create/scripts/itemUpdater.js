@@ -4,6 +4,7 @@ const setupPreviewListener = (id) => {
     const respEl = document.getElementById(`resp-msg`);
     inpEl.addEventListener('change', (e) => {
         const { value } = e.target;
+        if (!value) return;
         chEl.tagName === 'IMG' ? chEl.src = value : chEl.textContent = value;
         if (respEl) respEl.delete();
     });

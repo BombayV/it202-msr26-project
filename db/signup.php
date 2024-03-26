@@ -14,19 +14,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 
   $conn = $db['conn'];
-  $username = $_POST['username'];
+  $firstname = $_POST['firstname'];
+  $lastname = $_POST['lastname'];
   $password = $_POST['password'];
   $email = $_POST['email'];
-  $sql = 'INSERT INTO users (email, password, username) VALUES (:email, :password, :username)';
+  $dateCreated = date('Y:m:d H:i:s');
+  $sql = 'INSERT INTO users (email, password, firstname, lastname, dateCreated) VALUES (:email, :password, :firstname, :lastname, :dateCreated)';
 
   $stmt = $conn->prepare($sql);
   $stmt->bindParam(':email', $email);
-  $stmt->bindParam(':username', $username);
+  $stmt->bindParam(':firstname', $firstname);
+  $stmt->bindParam(':lastname', $lastname);
+  $stmt->bindParam(':dateCreated', $dateCreated);
   $stmt->bindParam(':password', password_hash($password, PASSWORD_DEFAULT));
   if ($stmt->execute()) {
     session_start();
     $_SESSION['email'] = $email;
-    $_SESSION['username'] = $username;
+    $_SESSION['name'] = $firstname . ' ' . $lastname;
     header('Location: ../');
     exit;
   } else {

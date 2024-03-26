@@ -4,10 +4,11 @@
 // 2/17/2024
 // Phase 1
 // msr26@njit.edu
+$DB_DSN = 'mysql:host=localhost;dbname=trailblazers;';
 try {
-  $conn = new PDO(getenv('DB_DSN'), getenv('DB_USERNAME'), getenv('DB_PASSWORD'));
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  return [
+    $conn = new PDO($DB_DSN, 'root',  'root');
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    return [
     'success' => true,
     'message' => 'Connection successful',
     'conn' => $conn

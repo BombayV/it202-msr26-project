@@ -75,18 +75,14 @@ WHERE `gearId` = 2;
 /* These will change later */
 CREATE TABLE `users` (
     `id` INT NOT NULL AUTO_INCREMENT,
-    `email` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL UNIQUE,
     `password` VARCHAR(255) NOT NULL,
-    `username` VARCHAR(40) NOT NULL,
-    `address` VARCHAR(255) DEFAULT NULL,
+    `firstname` VARCHAR(40) NOT NULL,
+    `lastname` VARCHAR(60) NOT NULL,
     `isAdmin` TINYINT(1) NOT NULL DEFAULT 0,
+    `dateCreated` DATETIME NOT NULL,
     PRIMARY KEY (`id`)
 );
-
-INSERT INTO `users`
-    (`email`, `password`, `username`, `address`, `isAdmin`)
-VALUES
-    ('dev@gmail.com', 'dev', 'dev', '1234 Main St', 1);
 
 CREATE TABLE `orders` (
     `id` INT NOT NULL AUTO_INCREMENT,
