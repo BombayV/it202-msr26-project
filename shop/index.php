@@ -47,10 +47,11 @@ for ($i = 0; $i < count($items); $i++) {
     <button data-code="'.$items[$i]['code'].'" class="item__submit">Add to Cart</button>
   ';
 
+  $useImage = strpos($items[$i]['image'], 'http') === 0;
   $shopContent .= '
   <div class="shop-item" data-category="'.$items[$i]['categoryId'].'">
     <img 
-      src="'.$root.'static/images/items/'.$items[$i]['image'].'"
+      src="'.($useImage ? $items[$i]['image'] : $root.'static/images/items/'.$items[$i]['image']).'"
       alt="'.$items[$i]['name'].'"
     >
     <div class="item-data">

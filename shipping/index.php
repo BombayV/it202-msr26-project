@@ -24,7 +24,7 @@ if (isset($error_message)) {
   $mainContent .= '<p class="error-message">Error: ' . $error_message . '</p>';
 }
 $mainContent .= '
-  <form action="./newOrder.php" method="post">
+  <form action="' . $root . 'shipping/newOrder.php" method="POST">
     <label for="ship-date">Ship Date</label>
     <input type="date" id="ship-date" name="ship-date" required min="2024-03-01" max="2025-03-31"/>
     <label for="order-number">Order Number</label>
