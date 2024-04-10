@@ -54,6 +54,7 @@ main button:hover {
 main img {
     filter: filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
     transition: all 0.2s;
+    mix-blend-mode: multiply;
 }
 
 
