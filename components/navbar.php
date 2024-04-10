@@ -12,7 +12,6 @@
 
   if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']) {
     $routes['Create'] = $root.'/create';
-    echo $_SESSION['is_admin'];
   }
 
   if (!isset($_SESSION['email'])) {

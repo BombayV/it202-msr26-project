@@ -65,15 +65,15 @@ if (isset($_SESSION['create_form']['success'])) {
 }
 
 if (isset($_SESSION['create_form']['error'])) {
-  $displayMessage = '<span id="resp-msg" class="error-msg">'.$_SESSION['create_form']['code_error'].'</span>';
-  unset($_SESSION['create_form']['code_error']);
+  $displayMessage = '<span id="resp-msg" class="error-msg">'.$_SESSION['create_form']['error'].'</span>';
+  unset($_SESSION['create_form']['error']);
 }
 
 $mainContent = '
 <main>
   <h1>Item creator</h1>
   <div class="modifier-cont">
-    <form action="'.$root.'db/createItem.php" method="POST">
+    <form id="item-form" action="'.$root.'db/createItem.php" method="POST">
       <div class="form-group">
         <label for="inp-category">Category</label>
         <select id="inp-category" name="inp-category">
@@ -100,8 +100,9 @@ $mainContent = '
         <label for="inp-price">Price</label>
         <input id="inp-price" name="inp-price" type="number" min="0" max="2000" placeholder="99.99" required/>
       </div>
-      <div>
-        <button type="submit">Create Item</button>
+      <div class="submit-holder">
+        <button id="create-btn" type="submit">Create Item</button>
+        <button id="reset-btn" class="reset" type="button">Reset</button>
       </div>
       '.$displayMessage.'
     </form>

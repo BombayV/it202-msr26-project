@@ -1,0 +1,118 @@
+ /*Mauricio Rivera
+// IT 202 - 002
+// 2/21/2024
+// Phase 1
+// msr26@njit.edu
+ */
+
+main {
+    background: var(--background);
+    min-height: 100vh;
+    color: var(--text);
+    padding: 6rem 2rem 4rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+main .holder {
+    display: flex;
+    flex-direction: column;
+}
+
+main .description {
+    margin-top: 1.6rem;
+    font-size: 1.2rem;
+}
+
+main .price-holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .price {
+    font-size: 1.6rem;
+}
+
+main button {
+    padding: 0.6rem 1.2rem;
+    background: var(--accent);
+    border-radius: 8px;
+    filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    font-size: 1.0rem;
+}
+
+main button:hover {
+    background: var(--accent-dark);
+}
+
+main img {
+    filter: filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+    transition: all 0.2s;
+}
+
+
+main>h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.6rem;
+}
+
+main.not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+main.not-found h1 {
+    font-size: 4rem;
+}
+
+main.not-found p {
+    font-size: 1.4rem;
+}
+
+main.not-found a {
+    margin-top: 1.6rem;
+    padding: 0.7rem 1.6rem;
+    font-size: 1.2rem;
+    background: var(--primary);
+    color: var(--background);
+    border-radius: 0.4rem;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+main.not-found a:hover {
+    background: var(--primary-darken);
+}
+
+/* Media queries */
+@media not all and (max-width: 768px) {
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 2rem;
+    }
+
+    main .holder {
+        max-width: 40%;
+        margin-top: 2rem;
+    }
+
+    main img {
+        max-width: 50%;
+        max-height: 32rem;
+        object-fit: contain;
+    }
+}
+
+@media not all and (max-width: 1280px) {
+
+}

@@ -86,6 +86,22 @@ form {
     resize: none;
 }
 
+.submit-holder {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.2rem;
+    width: 100%;
+}
+
+.reset {
+    background: maroon;
+    color: var(--text-white);
+}
+
+.reset:hover {
+    background: darkred;
+}
+
 form button {
     width: 100%;
     padding: 0.8rem 1.0rem;

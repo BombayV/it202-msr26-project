@@ -17,9 +17,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 
   $conn = $db['conn'];
-
   $code = validateInput(filter_input(INPUT_POST, 'inp-code', FILTER_SANITIZE_STRING));
-  $findCodeQuery = 'SELECT * FROM gear_items WHERE code = :code';
+
+	if ($code === '' || strlen($code) < 4 || strlen($code) > 10) {
+		$error = 'Invalid code';
+		$_SESSION['create_form']['error'] = $error;
+		header('Location: ../create');
+		exit;
+	}
+
+	$findCodeQuery = 'SELECT * FROM gear_items WHERE code = :code';
   $stmt = $conn->prepare($findCodeQuery);
   $stmt->bindParam(':code', $code);
   $stmt->execute();
@@ -38,7 +45,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $price = validateInput(filter_input(INPUT_POST, 'inp-price', FILTER_SANITIZE_NUMBER_FLOAT));
   $price = number_format($price, 2, '.', '');
 
-  if ($price <= 0 || $price > 2000.99) {
+	if ($name === '' || strlen($name) < 10 || strlen($name) > 100) {
+		$error = 'Invalid name';
+		$_SESSION['create_form']['error'] = $error;
+		header('Location: ../create');
+		exit;
+	}
+
+	if ($description === '' || strlen($description) < 10 || strlen($description) > 255) {
+		$error = 'Invalid description';
+		$_SESSION['create_form']['error'] = $error;
+		header('Location: ../create');
+		exit;
+	}
+
+  if ($price <= 0 || $price > 100000) {
     $error = 'Invalid price';
     $_SESSION['create_form']['error'] = $error;
     header('Location: ../create');

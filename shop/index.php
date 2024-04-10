@@ -35,7 +35,13 @@ for ($i = 0; $i < count($items); $i++) {
   $buttonContent = isset($_SESSION['is_admin']) && $_SESSION['is_admin'] ? '
     <form action="'.$formPath.'" class="delete-form" method="POST">
       <button type="button" data-code="'.$items[$i]['code'].'" class="item__submit">Add to Cart</button>
-      <button type="submit" name="code" value="'.$items[$i]['code'].'" class="item__delete">Delete</button>
+      <button 
+        name="code" 
+        value="'.$items[$i]['code'].'" 
+        class="item__delete"
+        onclick="return confirm(`Are you sure you want to delete this item?`)"
+      >
+        Delete</button>
     </form>
   ' : '
     <button data-code="'.$items[$i]['code'].'" class="item__submit">Add to Cart</button>
@@ -52,7 +58,9 @@ for ($i = 0; $i < count($items); $i++) {
         <div class="item-data__header">
           <div>
             <h3 class="header__title">'.$items[$i]['name'].'</h3>
-            <span class="header__code">'.$items[$i]['code'].'</span>
+            <a 
+                href="'.$root.'details/index.php?code='.$items[$i]['code'].'"
+                class="header__code">'.$items[$i]['code'].'</a>
           </div>
           <p class="header__price">
             '.$saleContent.'
