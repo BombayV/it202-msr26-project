@@ -23,9 +23,9 @@ $title = 'Shipping' ?>
 <?php
 $mainContent = '
 <main>
-  <h1>Ready to buy?</h1>
+  <h1>Ready to ship?</h1>
   <span class="main__separator"></span>
-  <p>Fill out the form below to complete your purchase.</p>
+  <p>Fill out the form below to complete the order.</p>
 ';
 if (isset($error_message)) {
   $mainContent .= '<p class="error-message">Error: ' . $error_message . '</p>';
