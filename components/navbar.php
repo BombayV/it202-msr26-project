@@ -12,10 +12,10 @@
 
   if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']) {
     $routes['Create'] = $root.'/create';
+    $routes['Shipping'] = $root.'/shipping';
   }
 
   if (!isset($_SESSION['email'])) {
-    $routes['Shipping'] = $root.'/shipping';
     $routes['Login'] = $root.'/auth/login';
   } else {
     $routes['Logout'] = $root.'/auth/logout';

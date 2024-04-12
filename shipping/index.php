@@ -1,10 +1,17 @@
 <?php
+session_start();
+if (!isset($_SESSION['is_admin']) || !$_SESSION['is_admin']) {
+  header('Location: ../');
+  exit;
+}
+?>
+
+<?php
 // Mauricio Rivera
 // IT 202 - 002
 // 2/17/2024
 // Phase 1
 // msr26@njit.edu
-session_start();
 $title = 'Shipping' ?>
 <?php $root = '../' ?>
 

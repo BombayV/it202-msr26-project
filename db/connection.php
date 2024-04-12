@@ -4,9 +4,12 @@
 // 2/17/2024
 // Phase 1
 // msr26@njit.edu
-$DB_DSN = 'mysql:host=localhost;dbname=trailblazers;';
+// skill issue tbh
+$USERNAME = 'msr26';
+$PASSWORD = 'jInka1-bebwyp-jijnuj';
+$DB_DSN = 'mysql:host=sql1.njit.edu;dbname=msr26;';
 try {
-    $conn = new PDO($DB_DSN, 'root',  'root');
+    $conn = new PDO($DB_DSN, $USERNAME, $PASSWORD);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     return [
     'success' => true,
